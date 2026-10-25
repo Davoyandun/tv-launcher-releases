@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ubicación para el televisor</title>
+<style>
+  body{font-family:system-ui,-apple-system,sans-serif;background:#0b0b0b;color:#fff;margin:0;
+       min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1.5rem}
+  h1{font-size:1.5rem;margin:.3rem 0}
+  p{color:#cfcfcf;font-size:1.1rem;max-width:22rem;line-height:1.5}
+  button{font-size:1.25rem;padding:1rem 2rem;border:0;border-radius:14px;background:#2e7d32;color:#fff;margin-top:1rem}
+  button:disabled{background:#444}
+  .ok{color:#7bd88f}.err{color:#ff8a65}
+</style>
+</head>
+<body>
+<h1>Clima de tu zona exacto</h1>
+<p id="s">Toca el botón y permite el acceso a tu ubicación. El televisor usará tu ubicación exacta (incluida la altitud) para el clima.</p>
+<button id="b">Enviar mi ubicación</button>
+<script>
+  var p = new URLSearchParams(location.hash.slice(1));
+  var tv = p.get('tv');       // 192.168.x.x:8099
+  var tok = p.get('t') || '';
+  var s = document.getElementById('s'), b = document.getElementById('b');
+  b.onclick = function () {
+    if (!tv) { s.className='err'; s.textContent='Falta la dirección del televisor. Vuelve a escanear el código.'; return; }
+    if (!navigator.geolocation) { s.className='err'; s.textContent='Este teléfono no permite compartir ubicación.'; return; }
+    b.disabled = true; s.className=''; s.textContent='Obteniendo tu ubicación…';
+    navigator.geolocation.getCurrentPosition(function (pos) {
+      var c = pos.coords;
+      var tz = '';
+      try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+      var u = 'http://' + tv + '/loc?lat=' + c.latitude + '&lon=' + c.longitude
+            + '&alt=' + (c.altitude != null ? Math.round(c.altitude) : '')
+            + '&acc=' + (c.accuracy != null ? Math.round(c.accuracy) : '')
+            + '&tz=' + encodeURIComponent(tz)
+            + '&lang=' + encodeURIComponent(navigator.language || '')
+            + '&t=' + encodeURIComponent(tok);
+      s.textContent = 'Enviando al televisor…';
+      location.href = u;   // navegación directa al TV (misma red); no es contenido mixto
+    }, function (e) {
+      b.disabled = false; s.className='err';
+      s.textContent = 'No se pudo obtener la ubicación: ' + e.message + '. Revisa los permisos del navegador.';
+    }, { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 });
+  };
+</script>
+</body>
+</html>
