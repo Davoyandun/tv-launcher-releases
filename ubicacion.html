@@ -17,6 +17,7 @@
 <body>
 <h1>Clima de tu zona exacto</h1>
 <p id="s">Toca el botón y permite el acceso a tu ubicación. El televisor usará tu ubicación exacta (incluida la altitud) para el clima.</p>
+<p style="color:#ffcf6b;font-size:1rem">⚠️ El celular debe estar en el <b>mismo WiFi de la casa</b> que el televisor (no datos móviles / 5G).</p>
 <button id="b">Enviar mi ubicación</button>
 <script>
   var p = new URLSearchParams(location.hash.slice(1));
@@ -42,6 +43,11 @@
             + '&lang=' + encodeURIComponent(navigator.language || '')
             + '&t=' + encodeURIComponent(tok);
       s.textContent = 'Enviando al televisor…';
+      setTimeout(function () {
+        s.className = 'err';
+        s.innerHTML = 'No se pudo contactar al televisor.<br>Conecta el celular al <b>mismo WiFi de la casa</b> (no datos móviles) y vuelve a escanear el código.';
+        b.disabled = false;
+      }, 7000);
       location.href = u;   // navegación directa al TV (misma red); no es contenido mixto
     }, function (e) {
       b.disabled = false; s.className='err';
