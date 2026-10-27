@@ -1,52 +1,136 @@
-# MiaLauncher — Launcher para Android TV
+# MiaLauncher 🏠📺
 
-Pantalla de inicio minimalista estilo Apple TV para televisores Android TV y Google TV: reloj, clima de tu zona, fondos bonitos, tus apps en una fila y un widget de lo que está sonando. Ligera (~280 KB), rápida y **se actualiza sola**.
+Una pantalla de inicio bonita y sencilla para tu televisor: **hora grande, clima de tu ciudad, fotos de fondo y tus apps** en una sola fila. Es gratis y se actualiza sola.
+
+
+## ✅ Antes de empezar
+
+- Un televisor o TV box con **Android TV** o **Google TV** (Sony, TCL, Hisense, Philips, Xiaomi, Chromecast con Google TV, etc.).
+- El **control remoto** del TV.
+- **Internet** en el TV.
+- Unos **10 minutos**.
+
+> 💡 En esta guía, **OK** es el botón redondo del centro del control, y **ATRÁS** es la flecha que regresa (↩).
 
 ---
 
-## 📺 Instalarlo en tu TV (sin computadora)
+## Paso 1 · Instalar la app «Downloader»
 
-Toma unos 5 minutos y solo necesitas el control remoto.
+Downloader es una app gratuita que sirve para descargar MiaLauncher.
 
-### 1. Instala la app «Downloader»
-1. En el TV abre **Google Play Store**.
-2. Busca **Downloader** (el ícono naranja, de *AFTVnews*) e instálala.
+1. Pulsa el botón **🏠 Inicio** del control.
+2. Abre **Google Play Store**.
+   - Si no la ves, entra a **Apps** y elige **Obtener más apps** o **Play Store**.
+3. Ve a la **lupa 🔍** (buscar) y escribe: **Downloader**
+4. Elige la que tiene el **ícono naranja** y dice **AFTVnews** debajo.
+   > ⚠️ Solo esa. Hay copias falsas con nombres parecidos.
+5. Pulsa **Instalar**. Espera a que termine.
+6. Pulsa **Abrir**.
+7. La primera vez, Downloader hace un par de preguntas:
+   - Si pregunta si puede **acceder a archivos o fotos** → elige **Permitir**.
+   - Si muestra un mensaje de novedades → pulsa **OK**.
 
-> ⚠️ Instala solo la oficial de AFTVnews: hay copias falsas.
+---
 
-### 2. Permite que Downloader instale apps
-1. Ve a **Ajustes → Apps → Seguridad y restricciones → Fuentes desconocidas**.
-   *(En Google TV: **Ajustes → Sistema → Acerca de** y pulsa 7 veces «Compilación del SO de Android TV» para activar el modo desarrollador; luego **Ajustes → Apps → Seguridad y restricciones → Fuentes desconocidas**.)*
-2. Activa **Downloader**.
+## Paso 2 · Escribir el código
 
-### 3. Descarga MiaLauncher con el código
-1. Abre **Downloader**.
-2. En el recuadro escribe este código y pulsa **Go**:
+1. En Downloader, a la izquierda, elige **Home**.
+2. Baja al recuadro blanco que dice **«Enter a URL or Search Term»** y pulsa **OK**. Aparece el teclado.
+3. Borra lo que haya escrito y escribe solo estos números:
 
-   ## `6383284`
+   # 6383284
 
-3. Se descarga solo. Cuando pregunte, pulsa **Instalar** y luego **Abrir**.
+4. Pulsa **Go**.
+5. Espera unos segundos mientras baja (verás una barra de progreso).
 
-> El código siempre baja la versión más reciente. Si lo prefieres, en un navegador también funciona **aftv.news/6383284**.
+---
 
-### 4. Déjalo como pantalla principal
-Al abrir MiaLauncher por primera vez, te ofrece hacerlo automáticamente. Sigue lo que aparezca en pantalla:
+## Paso 3 · Dar permiso a Downloader (solo la primera vez)
 
-- **Si el TV pregunta «¿Qué app de inicio quieres usar?»** → elige **MiaLauncher** y listo.
-- **Si aparece la pantalla «Hacer de MiaLauncher tu pantalla principal»** (pasa en **Google TV** y en muchos televisores, que no dejan elegir):
-  1. Pulsa **Abrir Accesibilidad**.
-  2. En la lista, entra a **MiaLauncher**.
-  3. **Actívalo** y acepta el aviso.
-  4. Pulsa el botón **🏠** del control: ya aparece esta pantalla.
+Por seguridad, el TV pregunta si Downloader puede instalar apps. Normalmente aparece un aviso así:
 
-¿Lo cerraste sin querer? Mientras no esté como principal verás un atajo **«Principal»** (ícono de casita) en la fila de atajos redondos: púlsalo y repite.
+> *«Por tu seguridad, no se permite que el TV instale apps desconocidas de esta fuente»*
 
-> **¿Es seguro el permiso de Accesibilidad?** MiaLauncher solo lo usa para saber cuándo aparece la pantalla de inicio de fábrica y abrirse en su lugar. No lee lo que ves, no escribe por ti y no envía nada a internet.
->
-> En Google TV puede verse un instante la pantalla de Google antes de que aparezca MiaLauncher: es normal.
+1. En ese aviso pulsa **Configuración** (o **Ajustes**).
+2. Se abre una lista. Busca **Downloader** y pulsa **OK** para **activarlo**: el interruptor se pone **azul** y dice **«Autorizadas»**.
+3. Pulsa **ATRÁS** una vez. Vuelves a la instalación.
+   - Si no vuelves, abre Downloader de nuevo y repite el **Paso 2**.
 
-### 5. (Opcional) Clima exacto de tu casa
-El clima sale solo por la ubicación aproximada del TV. Para que sea exacto, pulsa el atajo **«Mi zona»**, escanea el código QR con la cámara del celular (conectado al mismo WiFi) y toca **«Enviar ubicación»**.
+<details>
+<summary><b>No me apareció el aviso / no encuentro el botón (toca aquí)</b></summary>
+
+Actívalo a mano, según tu TV:
+
+**Android TV:**
+**Ajustes ⚙️ → Apps → Acceso especial de apps → Instalar aplicaciones desconocidas → Downloader** → actívalo.
+
+**Google TV** (Chromecast con Google TV, TV con la pantalla de «Para ti»):
+1. Primero hay que activar las opciones de desarrollador: **Ajustes ⚙️ → Sistema → Acerca de**. Baja hasta **«Compilación del SO de Android TV»** y pulsa **OK 7 veces seguidas**, hasta que diga **«Ahora eres un desarrollador»**.
+2. Luego: **Ajustes ⚙️ → Apps → Seguridad y restricciones → Fuentes desconocidas → Downloader** → actívalo.
+
+Después vuelve a Downloader y repite el **Paso 2**.
+</details>
+
+---
+
+## Paso 4 · Instalar MiaLauncher
+
+1. Aparece: **«¿Quieres instalar esta app?»** → pulsa **Instalar**.
+2. Si sale un aviso de **Google Play Protect** (por ejemplo «App no reconocida»):
+   pulsa **Más detalles** → **Instalar de todas formas**.
+   > Es normal: sale con cualquier app que no viene de la Play Store.
+3. Cuando diga **«App instalada»**, pulsa **Abrir**.
+4. Si Downloader pregunta si quieres **borrar el archivo** descargado → **Delete / Eliminar**. Ya no hace falta.
+
+---
+
+## Paso 5 · Dejarla como pantalla principal
+
+La primera vez que abres MiaLauncher te hace estas preguntas. Respóndelas así:
+
+**🔹 «¿Permitir que MiaLauncher acceda a la ubicación de este dispositivo?»**
+→ Elige **Mientras se usa la app** (o **Permitir**). Sirve para mostrar el clima de tu ciudad.
+
+**🔹 Luego verás UNA de estas dos pantallas:**
+
+**A) «¿Quieres establecer a MiaLauncher como tu aplicación de inicio predeterminada?»**
+1. Baja con las flechas hasta **MiaLauncher** y pulsa **OK** (queda marcado).
+2. Pulsa **Establecer como predeterminado**.
+3. ✅ ¡Listo!
+
+**B) «Hacer de MiaLauncher tu pantalla principal»** (pasa en Google TV y en muchos televisores)
+1. Pulsa **Abrir Accesibilidad**.
+2. Baja **hasta el final** de la lista. Debajo de **«Servicios»** está **MiaLauncher** → pulsa **OK**.
+3. Pulsa **OK** otra vez para activarlo.
+4. Sale un aviso que dice que la app *«puede recoger el texto que escribes»* → pulsa **Aceptar**.
+   > Tranquilo: es un texto genérico que Android muestra para cualquier app. MiaLauncher solo lo usa para saber cuándo aparece la pantalla de inicio original y mostrarse en su lugar. No lee lo que escribes ni envía nada.
+5. Pulsa **🏠 Inicio** en el control. ✅ ¡Ya aparece MiaLauncher!
+   > En Google TV puede verse medio segundo la pantalla original antes de MiaLauncher. Es normal.
+
+**¿Te saltaste este paso?** Mientras MiaLauncher no sea la pantalla principal verás un botón redondo con una **casita 🏠 llamado «Principal»**. Púlsalo y repite.
+
+---
+
+## Paso 6 · Permitir que se actualice sola (una sola vez)
+
+MiaLauncher se mejora con el tiempo y **se actualiza sola**. La **primera vez** que haya una versión nueva, al abrir MiaLauncher verás:
+
+1. **«¿Quieres actualizar esta app?»** → pulsa **Actualizar**.
+2. Si aparece el aviso de seguridad (*«no se permite que el TV instale apps desconocidas de esta fuente»*):
+   pulsa **Configuración** → activa **MiaLauncher** (interruptor azul) → **ATRÁS**.
+
+Desde ahí, las siguientes actualizaciones se instalan solas, sin preguntar y sin interrumpir lo que estás viendo.
+
+---
+
+## ⭐ Opcional · Clima exacto de tu casa
+
+El clima aparece solo, calculado por la ubicación aproximada del TV. Si quieres que sea exacto:
+
+1. Conecta tu **celular al mismo WiFi** que el TV.
+2. En MiaLauncher, pulsa el botón **📍 Mi zona**.
+3. Abre la **cámara del celular** y apunta al **código QR** de la pantalla.
+4. Toca el enlace que aparece y luego **«Enviar ubicación»**.
 
 ---
 
@@ -55,26 +139,31 @@ El clima sale solo por la ubicación aproximada del TV. Para que sea exacto, pul
 | Quiero… | Hago… |
 |---|---|
 | Abrir una app | Muévete con las flechas y pulsa **OK** |
-| Cambiar el orden de las apps | Mantén **OK** (o **MENÚ**) en una app, muévela con **◀ ▶** y pulsa **OK** para soltarla |
-| Pausar o cambiar la canción | Usa el widget «Reproduciendo ahora» (aparece cuando suena Spotify, YouTube…) |
-| Ir a Ajustes / WiFi / Pantalla | Atajos redondos de arriba |
-| Volver al inicio desde cualquier app | Botón **🏠** del control |
-
-**Actualizaciones:** no tienes que hacer nada. MiaLauncher busca versiones nuevas y se actualiza solo mientras no lo estás mirando.
+| Cambiar el orden de las apps | Mantén **OK** apretado sobre una app, muévela con **◀ ▶** y pulsa **OK** para soltarla |
+| Ir a Ajustes, WiFi o Pantalla | Usa los botones redondos de arriba |
+| Volver aquí desde cualquier app | Botón **🏠** del control |
 
 ---
 
-## ❓ Problemas frecuentes
+## 🆘 Si algo sale mal
 
-- **El botón 🏠 me lleva a la pantalla de Google** → MiaLauncher no quedó como principal. Pulsa el atajo **«Principal»** y vuelve a hacer el paso 4.
-- **«Accesibilidad» o «MiaLauncher» no aparecen en la lista** → Algunos TV lo esconden en **Ajustes → Sistema → Accesibilidad → Servicios**. Si tu TV no tiene Accesibilidad, MiaLauncher igual funciona como una app más (búscala en tus apps).
-- **Downloader dice que no puede instalar** → Revisa el paso 2 (fuentes desconocidas).
-- **El clima dice «Sin conexión»** → Revisa el WiFi; se arregla solo cuando vuelve internet.
-- **La hora está mal** → Corrige la zona horaria en **Ajustes → Sistema → Fecha y hora**: MiaLauncher usa la del TV.
-- **Quiero volver a la pantalla de antes** → Ajustes → Sistema → Accesibilidad → MiaLauncher → **Desactivar**. Si quieres, desinstala MiaLauncher en **Ajustes → Apps**.
+| Problema | Solución |
+|---|---|
+| No encuentro **Downloader** en la Play Store | Escríbelo sin espacios: **Downloader**. Debe ser el ícono naranja de **AFTVnews**. |
+| Downloader dice que el código **no existe** | Revisa los números: **6383284** (siete números). |
+| Dice que **no puede instalar** | Falta el permiso del **Paso 3**. |
+| El botón 🏠 me lleva a la **pantalla de antes** | Pulsa el botón **«Principal»** (casita) en MiaLauncher y repite el **Paso 5**. |
+| En Accesibilidad **no aparece MiaLauncher** | Baja hasta el final de la lista, en **Servicios**. En algunos TV está en **Ajustes → Sistema → Accesibilidad**. |
+| El clima dice **«Sin conexión»** | Revisa el WiFi del TV. Se arregla solo cuando vuelve internet. |
+| La **hora está mal** | **Ajustes → Sistema → Fecha y hora** → revisa la **zona horaria**. MiaLauncher usa la del TV. |
 
 ---
 
-**Requisitos:** televisor o TV box con Android TV / Google TV 9 o superior.
+## ↩️ Volver a la pantalla de antes
 
-Versiones publicadas: [Releases](https://github.com/Davoyandun/tv-launcher-releases/releases) · Descarga directa: [inicio.apk](https://github.com/Davoyandun/tv-launcher-releases/releases/latest/download/inicio.apk)
+1. **Ajustes ⚙️ → Sistema → Accesibilidad → MiaLauncher → Desactivar** (si lo activaste en el Paso 5 B).
+2. Si quieres, desinstálalo: **Ajustes ⚙️ → Apps → MiaLauncher → Desinstalar**.
+
+---
+
+<sub>Requiere Android TV / Google TV 9 o superior · [Versiones publicadas](https://github.com/Davoyandun/tv-launcher-releases/releases) · [Descarga directa del archivo](https://github.com/Davoyandun/tv-launcher-releases/releases/latest/download/inicio.apk)</sub>
